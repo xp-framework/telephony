@@ -1,44 +1,39 @@
-<?php
-/* This class is part of the XP framework
- *
- * $Id$
- */
+<?php namespace util\telephony;
  
+/**
+ * Represents an address
+ *
+ * @purpose  an abstract wrapper for addresses
+ */
+class TelephonyAddress extends \lang\Object {
+  public
+    $number   = '';
+
   /**
-   * Represents an address
+   * Constructor
    *
-   * @purpose  an abstract wrapper for addresses
+   * @param   string number
    */
-  class TelephonyAddress extends Object {
-    public
-      $number   = '';
-
-    /**
-     * Constructor
-     *
-     * @param   string number
-     */
-    public function __construct($number) {
-      
-      $this->number= $number;
-    }
+  public function __construct($number) {
     
-    /**
-     * Set Number
-     *
-     * @param   string number
-     */
-    public function setNumber($number) {
-      $this->number= $number;
-    }
-
-    /**
-     * Get Number
-     *
-     * @return  string
-     */
-    public function getNumber() {
-      return $this->number;
-    }
+    $this->number= $number;
   }
-?>
+  
+  /**
+   * Set Number
+   *
+   * @param   string number
+   */
+  public function setNumber($number) {
+    $this->number= $number;
+  }
+
+  /**
+   * Get Number
+   *
+   * @return  string
+   */
+  public function getNumber() {
+    return $this->number;
+  }
+}
